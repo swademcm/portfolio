@@ -7,16 +7,27 @@
   overflow: hidden;}
 h1 {
 font-size: 48px;
-font-family: Helvetica, sans-serif; }
+font-family: Helvetica, sans-serif; 
+font-weight: 800;
+
+}
     .grow {
-  animation: grow 1s ease 0s 1 normal forwards;
+  animation: grow 1s cubic-bezier(0.075, 0.82, 0.165, 1) 1 normal forwards;
 }
 @keyframes grow {
-  from { transform: scale(0);
-       letter-spacing: -10px;}
-  to { transform: scale(1);
-     letter-spacing: 0px;}
+  from { transform: scale(1.1);}
+  to { transform: scale(1);}
 }
+p {
+    animation: grow 1s cubic-bezier(0.075, 0.82, 0.165, 1) 1 normal forwards;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+img {
+    width: 128px;
+    margin: 20px;
+}
+
     
   </style>
 </head>
@@ -26,7 +37,14 @@ font-family: Helvetica, sans-serif; }
     
           <div class="grow">
             <h1>Swade McMiller</h1>
+            <p>Software Engineer, Programmer, Web Developer</p>
           </div>
+
+          <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdbJn3QLVEcnN6v_L6czH_6mS2G0HgUXiY7cPMuu2vZw&s"></img>
+          </div>
+
+          
 
       </center>
   </body>
