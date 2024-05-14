@@ -1,51 +1,134 @@
 <html>
 <head>
-  <title>swade's site</title>
+  <title>Swade's Portfolio</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
   <style>
-* { 
+
+* {
+  overflow: hidden;
+}
+*::selection {
+  background: #323232;
+}
+html { 
   margin: 0;
-  overflow: hidden;}
+  overflow-y: scroll;
+  background-color: #121212;}
+
 h1 {
 font-size: 48px;
 font-family: Helvetica, sans-serif; 
 font-weight: 800;
+color: #fff;
+margin: 0px;
+}
 
+
+.shrink {
+  animation: shrink 1s cubic-bezier(0.075, 0.82, 0.165, 1) 1 normal forwards;
 }
-    .grow {
-  animation: grow 1s cubic-bezier(0.075, 0.82, 0.165, 1) 1 normal forwards;
-}
-@keyframes grow {
+@keyframes shrink {
   from { transform: scale(1.1);}
   to { transform: scale(1);}
 }
 p {
-    animation: grow 1s cubic-bezier(0.075, 0.82, 0.165, 1) 1 normal forwards;
+    animation: shrink 1s cubic-bezier(0.075, 0.82, 0.165, 1) 1 normal forwards;
     font-family: 'Courier New', Courier, monospace;
+    color: #fff;
 }
 
 img {
-    width: 128px;
+    width: 48px;
     margin: 20px;
+    animation: shrink 1s cubic-bezier(0.075, 0.82, 0.165, 1) 1 normal forwards;
+
 }
 
+img:hover {
+  animation: grow 1s cubic-bezier(0.075, 0.82, 0.165, 1) 1 normal;
+}
+
+.img-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  
+}
+
+@keyframes grow {
+  from { transform: scale(1);}
+  to { transform: scale(1.1);}
+}
+.rounded-box {
+  height: 300px;
+  width: 90%;
+  max-width: 600px;
+  background-color: #262626;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 20px;
+}
     
   </style>
 </head>
 
   <body>
-    <center style="top: 50%; transform: translate(0%, 50%);" >
-    
-          <div class="grow">
+    <center>
+
+          <div style="margin-top: 100px;" class="shrink">
             <h1>Swade McMiller</h1>
             <p>Software Engineer, Programmer, Web Developer</p>
+            
           </div>
 
-          <div>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdbJn3QLVEcnN6v_L6czH_6mS2G0HgUXiY7cPMuu2vZw&s"></img>
+          <div class="img-container">
+            <a href="https://github.com/swademcm">
+            <img src="github.png">
+            </a>
+            <a href="https://instagram.com/swademcmiller">
+            <img src="instagram.png">
+            </a>
+            <a href="https://snapchat.com/add/onenonlyswade">
+            <img src="snapchat.png">
+            </a>
           </div>
+
+        
+          
+          <div class="shrink" style=" margin: 50px; margin-top: 100px;">
+            <h1 style="font-size: 32px; opacity:75%;">My Projects</h1>
+            <p>Projects I assisted in development.</p>
+          </div>
+
+          <div class="rounded-box">
+            <div style="text-align: left;">
+            <h1 style="background: #262626; font-size: 24px;">Discore</h1>
+            <p style="background: #262626; animation: none;">A script to get and restore members to a server using OAUTH2</p>
+          </div>
+          <p style="background: #262626; animation: none; margin: none;">Information</p>
+
+          <div class="img-container" style="background: #262626;">
+
+          
+          <a href="https://github.com/swademcm" style="background: #262626; color: #fff; margin: 30px; margin-top: 0;">
+            <img  style="background: #262626; width: 80px;" src="github.png"><br>
+            <p style="background: #262626; color: #fff;">Swade - Creator</p>
+          </a>
+          <a href="https://python.org" style="background: #262626; color: #fff; margin: 30px; margin-top: 0;">
+            <img  style="background: #262626; width: 80px;" src="https://www.iconsdb.com/icons/preview/white/python-xxl.png"><br>
+            <p style="background: #262626; color: #fff;">Python - Language</p>
+          </a>
+        </div>
+        
+          
+
+
+          </div>
+        </center>
 
           
 
-      </center>
+      
   </body>
 </html>
